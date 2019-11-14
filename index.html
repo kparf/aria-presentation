@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shower Presentation Engine</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css">
+    <style>
+        .shower {
+            --slide-ratio: calc(16 / 9);
+        }
+    </style>
+</head>
+<body class="shower list">
+
+    <header class="caption">
+        <h1>Доступный Веб</h1>
+        <p>Кирилл Парфенков</p>
+    </header>
+
+    <section class="slide" id="cover">
+        <h2>Доступный Веб</h2>
+        <p>Кирилл Парфенков</p>
+        <figure>
+            <img class="cover" src="pictures/web-accessibility.png" alt="Изображенеи с глазом, лубой, ухом">
+        </figure>
+        <style>
+            #cover h2 {
+                margin: 30px 0 0;
+                text-align: center;
+                font-size: 80px;
+            }
+
+            #cover p {
+                margin: 30px 0 0;
+                color: var(--color-grey);
+                text-align: center;
+                font-weight: bold;
+                font-size: 25px;
+            }
+            #cover img {
+                filter: blur(2px);
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="mdn">
+        <h2>Доступность с точки зрения веба</h2>
+        <div class="contianer">
+                <img src="pictures/LNPwoiWi_400x400.jpg">
+                Accessability in Web development means anabling as many people as possible to use Web sites, even when those people's abitites a limited in same ways.
+            </div>
+        <style>
+            #mdn img {
+                width: 100px;
+                float: left;
+                margin-right: 20px;
+                margin-top: 15px;
+            }
+
+            #mdn .contianer {
+                display: flex;
+                align-items: flex-start;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="w3c">
+        <h2>Доступность с точки зрения веба</h2>
+        <div class="contianer">
+            <img src="pictures/w3c.png">
+            The social value of the Web is that it enables human communication, comerce, and opportunities to share knowledge.
+            One if W3C's primary goals is to make these benefits available to all people, whatever their hardware, software,
+            network infrastructure, native language, culture, geographical location, or physical or mental ability.
+        </div>
+        <style>
+            #w3c img {
+                width: 100px;
+                float: left;
+                margin-right: 20px;
+                margin-top: 15px;
+            }
+
+            #w3c .contianer {
+                display: flex;
+                align-items: flex-start;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="who">
+        <div class="contianer">
+            <img src="pictures/h-logo-blue.svg" alt="лого WHO">
+            <p>
+                The World Health Organization's Disability and health fact sheet states that "Over a billion people,
+                about <strong>15%</strong> of the world's population, have some form of disability", and "Between 110 million and 190 million
+                adults have significant difficulties in functioning."
+            </p>
+        <style>
+            #who img {
+                height: 70px;
+                float: left;
+                margin-right: 20px;
+            }
+            #who .contianer {
+                display: flex;
+                align-items: flex-start;
+                margin-top: 30px;
+            }
+        </style>
+    </section>
+
+    <section class="slide">
+        <h2>Kinds of disability</h2>
+        <ol>
+            <li>Visual</li>
+            <li>Hearing</li>
+            <li>Mobility</li>
+            <li>Cognitive</li>
+        </ol>
+        <figure>
+            <img class="cover" src="pictures/accessibility-hexagons.png" alt="Изображенеи с глазом, лубой, ухом">
+        </figure>
+    </section>
+
+    <section class="slide">
+        <h2>Motivation</h2>
+        <ol>
+            <li>Improves your public image</li>
+            <li>Make your site usable by other groups</li>
+            <li>Improve SEO</li>
+            <li>Law</li>
+        </ol>
+    </section>
+
+    <section class="slide">
+        <h2>Law (EU)</h2>
+        <ul>
+            <li>Web Accessibility Directive</li>
+            <li>European Accessibility Act</li>
+            <li>Standard EN 301 549 — EN 301 549</li>
+        </ul>
+    </section>
+    <section class="slide">
+        <h2>Law (USA)</h2>
+        <ul>
+            <li>Section 508, 508 Compliance</li>
+            <li>Americans with Disabilities Act — ADA</li>
+        </ul>
+    </section>
+    <section class="slide">
+        <h2>Web Content Accessibility Guidelines</h2>
+        <p>
+            WCAG covers a wide range of recommendations for making Web content more accessible.
+            Following these guidelines will make content more accessible to a wider range of people with disabilities, including accommodations
+            for blindness and low vision, deafness and hearing loss, limited movement, speech disabilities, photosensitivity, and combinations
+            of these, and some accommodation for learning disabilities and cognitive limitations.
+        </p>
+    </section>
+    <section class="slide">
+        <figure>
+            <img class="cover" src="pictures/HTML5_Semantics.png" alt="">
+        </figure>
+    </section>
+    <section class="slide">
+        <h2>Semantics in HTML</h2>
+        <pre>
+            <code><mark>&lt;h1&gt;</mark>This is a top level heading<mark>&lt;/h1&gt;</mark></code>
+        </pre>
+        <pre>
+            <code>
+<mark>&lt;span</mark> style="font-size: 32px; margin: 21px 0;"&gt;
+    Is this a top level heading?
+<mark>&lt;/span</mark>
+            </code>
+        </pre>
+    </section>
+    <section class="slide">
+        <h2>Semantics in HTML</h2>
+        <pre>
+            article, aside, details, figcaption, figure, footer,
+            header, main, mark, nav, section, summary, time...
+        </pre>
+    </section>
+    <section class="slide">
+        <h2>ARIA</h2>
+        <p>
+            WAI-ARIA is a specification written  by the W3C, defining a set of additional HTML
+            attributes that can be applied to elements toprovide additional semantics and
+            improve accessibility wherever it is lacking.
+        </p>
+    </section>
+    <section class="slide">
+        <h2>ARIA</h2>
+        <ul>
+            <li>Roles</li>
+            <li>Properties</li>
+            <li>State</li>
+        </ul>
+    </section>
+    <section class="slide">
+        <figure>
+            <img class="cover" src="pictures/rdf_model.png" alt="ARIA tree">
+        </figure>
+    </section>
+
+    <section class="slide" id="image-dig">
+        <h2>Изображение дополняет текст</h2>
+        <p>
+            <img src="pictures/guide-dog.jpg">
+            Собаки-проводники часто носят на шее колокольчик, чтобы владелец точно знал, где находится собака.
+        </p>
+        <pre>
+            <code>&lt;img src="dog.png" <mark>alt="Собака-проводник с колокольчиком на шее"</mark>&gt;</code>
+        </pre>
+        <style>
+            #image-dig img {
+                height: 100px;
+                float: left;
+                margin-right: 15px;
+            }
+            #image-dig p {
+                color: var(--color-blue);
+            }
+
+            #image-dig code {
+                font-size: 18px;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="image-phone">
+        <h2>Изображение дополняет текст</h2>
+        <div class="container">
+            <img src="pictures/phone-icon-img.png">
+            +375 (29) 444 44 44
+        </div>
+        <pre>
+            <code>&lt;img src="icon-phone.png" <mark>alt="Телефон:"</mark>&gt;+375 (29) 444 44 44</code>
+        </pre>
+        <style>
+            #image-phone img {
+                height: 1.5em;
+                margin-right: 15px;
+            }
+            #image-phone .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 30px;
+            }
+
+            #image-phone code {
+                font-size: 18px;
+            }
+        </style>
+    </section>
+    <section class="slide" id="image-decorate">
+        <h2>Декоративные изображения</h2>
+        <div class="container">
+            <img src="pictures/wave.png">
+        </div>
+        <pre>
+            <code>&lt;img src="gradient.png" <mark>aria-hidden="true" alt=""</mark>&gt;</code>
+        </pre>
+        <style>
+            #image-decorate img {
+                margin-right: 15px;
+            }
+            #image-decorate .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 30px;
+            }
+
+            #image-decorate code {
+                font-size: 18px;
+            }
+        </style>
+    </section>
+    <section class="slide" id="image-group">
+        <h2>Группы изображений</h2>
+        <div class="container">
+            <img src="pictures/icon-star.png" alt="Рейтинг фильма 4 из 5">
+            <img src="pictures/icon-star.png" alt="">
+            <img src="pictures/icon-star.png" alt="">
+            <img src="pictures/icon-star.png" alt="">
+            <img src="pictures/icon-star-empty.png" alt="">
+        </div>
+        <pre>
+            <code>&lt;img src="pictures/i-star.png" <mark>alt="Рейтинг фильма 4 из 5"</mark>&gt;</code>
+            <code>&lt;img src="pictures/i-star.png" alt=""&gt;</code>
+            <code>&lt;img src="pictures/i-star.png" alt=""&gt;</code>
+            <code>&lt;img src="pictures/i-star.png" alt=""&gt;</code>
+            <code>&lt;img src="pictures/i-star-empty.png" alt=""&gt;</code>
+        </pre>
+        <style>
+            #image-group img {
+                margin-right: 15px;
+            }
+            #image-group .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 30px;
+            }
+
+            #image-group code {
+                font-size: 18px;
+            }
+        </style>
+    </section>
+    <section class="slide" id="fields">
+        <h2>Поля ввода</h2>
+        <div class="container">
+            <label for="input-mail">Электронная почта</label>
+            <input type="text" id="input-mail">
+        </div>
+        <pre>
+            <code>&lt;label <mark>for="input-mail"</mark>&gt;Электронная почта&lt;/label&gt;</code>
+            <code>&lt;input type="text" <mark>id="input-mail"</mark>&gt;</code>
+        </pre>
+        <style>
+            #fields .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 30px;
+            }
+
+            #fields .container input {
+                margin-left: 20px;
+                width: 200px;
+                padding: 5px;
+            }
+
+            #fields code {
+                font-size: 18px;
+            }
+        </style>
+    </section>
+    <section class="slide" id="hidden-fields-1">
+        <h2>Поля ввода</h2>
+        <div class="container">
+            <label for="input-mail">Электронная почта</label>
+            <input type="text" id="input-mail">
+        </div>
+        <pre>
+            <code>.visually-hidden {</code>
+            <code>  position: absolute;</code>
+            <code>  width: 1px;</code>
+            <code>  height: 1px;</code>
+            <code>  margin: -1px;</code>
+            <code>  border: 0;</code>
+            <code>  padding: 0;</code>
+            <code>  clip: rect(0 0 0 0);</code>
+            <code>  overflow: hidden;</code>
+            <code>}</code>
+        </pre>
+
+        <style>
+            #hidden-fields-1 .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 30px;
+            }
+
+            #hidden-fields-1 .container input {
+                margin-left: 20px;
+                width: 200px;
+                padding: 5px;
+            }
+
+            #hidden-fields-1 code {
+                font-size: 16px;
+            }
+        </style>
+    </section>
+    <section class="slide" id="hidden-fields-2">
+        <h2>Поля ввода</h2>
+        <div class="container">
+            <label for="input-mail">Электронная почта</label>
+            <input type="text" id="input-mail">
+        </div>
+        <pre>
+            <code>&lt;label for="input-mail" id="label-mail"&gt;Электронная почта&lt;/label&gt;</code>
+            <code>&lt;input type="text" id="input-mail" <mark>aria-labelledby="label-mail"</mark>&gt;</code>
+        </pre>
+
+        <style>
+            #hidden-fields-2 .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 30px;
+            }
+
+            #hidden-fields-2 .container input {
+                margin-left: 20px;
+                width: 200px;
+                padding: 5px;
+            }
+
+            #hidden-fields-2 code {
+                font-size: 16px;
+            }
+        </style>
+    </section>
+    <section class="slide" id="hidden-fields-3">
+        <h2>Поля ввода</h2>
+        <div class="container">
+            <label for="input-mail" id="label-mail">Электронная почта</label>
+            <input type="email" id="input-mail" aria-labelledby="label-mail" aria-required="true" required>
+        </div>
+        <pre>
+            <code>&lt;label for="input-mail" id="label-mail"&gt;Электронная почта&lt;/label&gt;</code>
+            <code>&lt;input <mark>type="email"</mark> id="input-mail" aria-labelledby="label-mail" <mark>aria-required="true" required</mark>&gt;</code>
+        </pre>
+
+        <style>
+            #hidden-fields-3 .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 30px;
+            }
+
+            #hidden-fields-3 .container input {
+                margin-left: 20px;
+                width: 200px;
+                padding: 5px;
+            }
+
+            #hidden-fields-3 code {
+                font-size: 16px;
+            }
+        </style>
+    </section>
+    <section class="slide" id="hidden-fields-4">
+        <h2>Поля ввода</h2>
+        <div class="container">
+            <label for="input-mail" id="label-mail">Электронная почта</label>
+            <input type="email" id="input-mail" aria-labelledby="label-mail" aria-required="true" required>
+        </div>
+        <pre>
+            <code>&lt;label for="input-mail" id="label-mail"&gt;Электронная почта&lt;/label&gt;</code>
+            <code>&lt;input <mark>type="email"</mark> id="input-mail" aria-labelledby="label-mail" <mark>aria-required="true" required</mark>&gt;</code>
+        </pre>
+
+        <style>
+            #hidden-fields-4 .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 30px;
+            }
+
+            #hidden-fields-4 .container input {
+                margin-left: 20px;
+                width: 200px;
+                padding: 5px;
+            }
+
+            #hidden-fields-4 code {
+                font-size: 16px;
+            }
+        </style>
+    </section>
+    <section class="slide" id="field-set">
+        <h2>Группы полей</h2>
+        <div class="container">
+            <fieldset>
+                <legend>Контакты</legend>
+                <label for="field-set-input-mail" id="field-set-label-mail">Электронная почта</label>
+                <input type="email" id="field-set-input-mail" aria-labelledby="label-mail">
+                
+                <label for="field-set-input-phone" id="field-set-label-phone">Телефон</label>
+                <input type="email" id="field-set-input-phone" aria-labelledby="label-phone">
+            </fieldset>
+        </div>
+        <pre>
+            <code><mark>&lt;fieldset&gt;</mark></code>
+            <code>  <mark>&lt;legend&gt;Контакты&lt;/legend&gt;</mark></code>
+            <code>  &lt;label for="input-mail" id="label-mail"&lt;Электронная почта&lt;/label&gt;</code>
+            <code>  &lt;input type="email" id="input-mail" aria-labelledby="label-mail"&gt;</code>
+            <code></code>
+            <code>  &lt;label for="input-phone" id="label-phone"&lt;Телефон&gt;/label></code>
+            <code>  &lt;input type="email" id="input-phone" aria-labelledby="label-phone"&gt;</code>
+            <code><mark>&lt;/fieldset&gt;</mark></code>
+        </pre>
+
+        <style>
+            #field-set .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 30px;
+                font-size: 16px;
+            }
+
+            #field-set .container input {
+                margin-left: 20px;
+                width: 200px;
+                padding: 5px;
+            }
+
+            #field-set code {
+                font-size: 14px;
+            }
+        </style>
+    </section>
+    <section class="slide" id="field-set-2">
+        <h2>Группы полей</h2>
+        <div class="container">
+            <fieldset>
+                <legend>Контакты</legend>
+                <label for="field-set-2-input-mail" id="field-set-2-label-mail">Электронная почта</label>
+                <input type="email" id="field-set-2-input-mail" aria-labelledby="label-mail">
+                
+                <label for="field-set-2-input-phone" id="field-set-2-label-phone">Телефон</label>
+                <input type="email" id="field-set-2-input-phone" aria-labelledby="label-phone">
+            </fieldset>
+        </div>
+        <pre>
+            <code>&lt;div <mark>role=&quot;group&quot; aria-labelledby=&quot;user-data&quot</mark>;&gt;</code>
+            <code>  &lt;div <mark>id=&quot;user-data&quot;</mark>&gt;Контакты&lt;/div&gt;</code>
+            <code>  &lt;label for=&quot;input-mail&quot; id=&quot;label-mail&quot;&gt;Электронная почта&lt;/label&gt;</code>
+            <code>  &lt;input type=&quot;email&quot; id=&quot;input-mail&quot; aria-labelledby=&quot;label-mail&quot;&gt;</code>
+            <code>  &lt;label for=&quot;input-phone&quot; id=&quot;label-phone&quot;&gt;Телефон&lt;/label&gt;</code>
+            <code>  &lt;input type=&quot;email&quot; id=&quot;input-phone&quot; aria-labelledby=&quot;label-phone&quot;&gt;</code>
+            <code>&lt;/div&gt;</code>
+        </pre>
+
+        <style>
+            #field-set-2 .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 30px;
+                font-size: 16px;
+            }
+
+            #field-set-2 .container input {
+                margin-left: 20px;
+                width: 200px;
+                padding: 5px;
+            }
+
+            #field-set-2 code {
+                font-size: 14px;
+            }
+        </style>
+    </section>
+    <section class="slide" id="instractions">
+        <h2>Инструкции</h2>
+        <div class="container">
+            <label for="input-mail" id="label-mail">Электронная почта (обязательно)</label>
+            <input type="email" id="input-mail" aria-labelledby="label-mail" aria-required="true">
+        </div>
+        <pre>
+            <code>&lt;label for=&quot;input-mail&quot; id=&quot;label-mail&quot;&gt;Электронная почта <mark>(обязательно)</mark>&lt;/label&gt;</code>
+            <code>&lt;input type=&quot;email&quot; id=&quot;input-mail&quot; aria-labelledby=&quot;label-mail&quot; <mark>aria-required=&quot;true&quot;</mark>&gt;</code>
+        </pre>
+
+        <style>
+            #instractions .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 30px;
+                font-size: 16px;
+            }
+
+            #instractions .container input {
+                margin-left: 20px;
+                width: 200px;
+                padding: 5px;
+            }
+
+            #instractions code {
+                font-size: 14px;
+            }
+        </style>
+    </section>
+    <section class="slide" id="natifications">
+        <h2>Уведомления</h2>
+        <div class="container">
+            <p class="txt-danger" id="danger-mail">Неправильный формат электронной почты</p>
+            <p>
+                <label for="input-mail">Электронная почта</label>
+                <input type="email" id="input-mail" aria-describedby="danger-mail" class="textbox" aria-required="true">
+            </p>
+            <p>
+                <label for="input-phone">Телефон</label>
+                <input type="email" id="input-phone" class="textbox" aria-required="true">
+            </p>
+        </div>
+        <pre>
+            <code>&lt;p class=&quot;txt-danger&quot; <mark>id=&quot;danger-mail&quot;</mark>&gt;Неправильный формат электронной почты&lt;/p&gt;</code>
+            <code>&lt;p&gt;</code>
+            <code>    &lt;label for=&quot;input-mail&quot;&gt;Электронная почта&lt;/label&gt;</code>
+            <code>    &lt;input type=&quot;email&quot; id=&quot;input-mail&quot; <mark>aria-describedby=&quot;danger-mail&quot;</mark> class=&quot;textbox&quot; aria-required=&quot;true&quot;&gt;</code>
+            <code>&lt;/p&gt;</code>
+            <code>&lt;p&gt;</code>
+            <code>    &lt;label for=&quot;input-phone&quot;&gt;Телефон&lt;/label&gt;</code>
+            <code>    &lt;input type=&quot;email&quot; id=&quot;input-phone&quot; class=&quot;textbox&quot; aria-required=&quot;true&quot;&gt;</code>
+            <code>&lt;/p&gt;</code>
+        </pre>
+
+        <style>
+            #natifications .container {
+                display: flex;
+                flex-direction: column;
+                
+                
+                margin: 30px;
+                font-size: 16px;
+            }
+
+            #natifications .container input {
+                margin-left: 20px;
+                width: 200px;
+                padding: 5px;
+            }
+
+            #natifications .txt-danger {
+                color: red;
+            }
+
+            #natifications code {
+                font-size: 12px;
+            }
+        </style>
+    </section>
+    <section class="slide" id="table-1">
+        <h2>Таблицы</h2>
+        <div class="container">
+            <table class="horizontal width-100">
+                <colgroup><col style="width: 50%"><col><col>
+                </colgroup><thead><tr><th scope="col">ФИО</th>
+                    <th scope="col">Возраст</th><th scope="col">Профессия</th></tr></thead>
+                    <tbody><tr><td>Иванов Александр Александрович</td><td>23 года</td><td>Врач</td></tr>
+                        <tr><td>Китаева Анна Сергеевна</td>
+                            <td>34 года</td><td>Учитель</td></tr>
+                            <tr><td>Колосова Александра Ивановна</td><td>32 года</td><td>Программист</td></tr>
+                    </tbody>
+                </table>
+        </div>
+        <pre>
+            <code>&lt;thead&gt;</code>
+            <code>    &lt;tr&gt;</code>
+            <code>        &lt;th <mark>scope=&quot;col&quot;</mark>&gt;ФИО&lt;/th&gt;</code>
+            <code>        &lt;th <mark>scope=&quot;col&quot;</mark>&gt;Возраст&lt;/th&gt;</code>
+            <code>        &lt;th <mark>scope=&quot;col&quot;</mark>&gt;Профессия&lt;/th&gt;</code>
+            <code>    &lt;/tr&gt;</code>
+            <code>&lt;/thead&gt;</code>
+        </pre>
+
+        <style>
+            #table-1 .container {
+                display: flex;
+                flex-direction: column;
+                
+                
+                margin: 30px;
+                font-size: 16px;
+            }
+
+            #table-1 .container input {
+                margin-left: 20px;
+                width: 200px;
+                padding: 5px;
+            }
+
+            #table-1 .txt-danger {
+                color: red;
+            }
+
+            #table-1 code {
+                font-size: 12px;
+            }
+        </style>
+    </section>
+    <section class="slide" id="table-2">
+        <h2>Таблицы</h2>
+        <div class="container">
+            <table class="horizontal width-100">
+                <colgroup><col style="width: 50%"><col><col>
+                </colgroup><thead><tr><th scope="col">ФИО</th>
+                    <th scope="col">Возраст</th><th scope="col">Профессия</th></tr></thead>
+                    <tbody><tr><td>Иванов Александр Александрович</td><td>23 года</td><td>Врач</td></tr>
+                        <tr><td>Китаева Анна Сергеевна</td>
+                            <td>34 года</td><td>Учитель</td></tr>
+                            <tr><td>Колосова Александра Ивановна</td><td>32 года</td><td>Программист</td></tr>
+                    </tbody>
+                </table>
+        </div>
+        <pre>
+            <code><mark>&lt;caption&gt;Расписание работы магазина&lt;/caption&gt;</mark></code>
+            <code>&lt;thead&gt;</code>
+            <code>    &lt;tr&gt;</code>
+            <code>    &lt;th <mark>scope=&quot;col&quot;</mark>&gt;№ строки&lt;/th&gt;</code>
+            <code>    &lt;th <mark>scope=&quot;col&quot;</mark>&gt;ФИО&lt;/th&gt;</code>
+            <code>    &lt;th <mark>scope=&quot;col&quot;</mark>&gt;Возраст&lt;/th&gt;</code>
+            <code>    &lt;th <mark>scope=&quot;col&quot;</mark>&gt;Профессия&lt;/th&gt;</code>
+            <code>    &lt;/tr&gt;</code>
+            <code>&lt;/thead&gt;</code>
+        </pre>
+
+        <style>
+            #table-2 .container {
+                display: flex;
+                flex-direction: column;
+                
+                
+                margin: 30px;
+                font-size: 16px;
+            }
+
+            #table-2 .container input {
+                margin-left: 20px;
+                width: 200px;
+                padding: 5px;
+            }
+
+            #table-2 .txt-danger {
+                color: red;
+            }
+
+            #table-2 code {
+                font-size: 12px;
+            }
+        </style>
+    </section>
+    <section class="slide">
+        <h2>Язык содержимого</h2>
+        <p>
+            Укажите язык в атрибуте lang для &lt;html&gt;,
+            чтобы синтезаторы речи точно определили язык страницы. Примеры значений атрибута:
+            ru — русский язык, en — английский язык
+        </p> 
+    </section>
+    <section class="slide">
+        <h2>Меню</h2>
+        <p>
+            Используйте элемент nav для навигации. Если последовательность пунктов меню не важна, используйте неупорядоченный список ul, если важна — список ol. Добавьте
+            заголовок меню в атрибут aria-label или aria-labelledby, чтобы пользователь понял назначение меню.
+        </p> 
+    </section>
+    <section class="slide" id="menu">
+        <h2>Меню</h2>
+        <p>
+            Используйте элемент nav для навигации. Если последовательность пунктов меню не важна, используйте неупорядоченный список ul, если важна — список ol.
+            Добавьте заголовок меню в атрибут aria-label или aria-labelledby, чтобы пользователь понял назначение меню.
+        </p>
+        <pre>
+            <code>&lt;nav&gt;</code>
+            <code>    &lt;ul&gt;</code>
+            <code>        &lt;li <mark>aria-current=&quot;page&quot;</mark>&gt;</code>
+            <code>            &lt;span&gt;<mark>&lt;span class=&quot;visually-hidden&quot;&gt;Текущий пункт:&lt;/span&gt;</mark>Шапки, шарфы, варежки&lt;/span&gt;</code>
+            <code>        &lt;/li&gt;</code>
+            <code>        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Цены&lt;/a&gt;&lt;/li&gt;</code>
+            <code>        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Контакты&lt;/a&gt;&lt;/li&gt;</code>
+            <code>    &lt;/ul&gt;</code>
+            <code>&lt;/nav&gt;</code>
+        </pre>
+        <style>
+            #menu p {
+                font-size: 14px;
+            }
+            #menu code{
+                font-size: 12px;
+            }
+        </style>
+    </section>
+    <section class="slide">
+        <h2>Управление с клавиатуры</h2>
+        <p>
+            Дайте пользователю возможность управлять сайтом с клавиатуры без ограничений по времени на нажатие клавиши. 
+        </p>
+    </section>
+    <section class="slide" id="ratio">
+        <h2>Контрастность</h2>
+        <table class="standard-table">
+        <thead>
+            <tr>
+            <th scope="col">Type of content</th>
+            <th scope="col">Minimum ratio (AA rating)</th>
+            <th scope="col">Enhanced ratio (AAA rating)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td>Body text</td>
+            <td>4.5 : 1</td>
+            <td>7 : 1</td>
+            </tr>
+            <tr>
+            <td>Large-scale text (120-150% larger than body text)</td>
+            <td>3 : 1</td>
+            <td>4.5 : 1</td>
+            </tr>
+            <tr>
+            <td>Active user interface components and graphical objects such as icons and graphs</td>
+            <td>3 : 1</td>
+            <td>Not defined</td>
+            </tr>
+        </tbody>
+        </table>
+        <style>
+            #ratio table {
+                font-size: 14px;
+            }
+        </style>
+    </section>
+    <section class="slide" id="ratio-2">
+            <h2>Контрастность</h2>
+        <div class="container">
+            <img src="pictures/Screen-3.png" alt="">
+            <img src="pictures/Screen-4.png" alt="">
+        </div>
+        <style>
+            #ratio-2 img {
+                height: 300px;
+            }
+            #ratio-2 .container {
+                margin-bottom: 20px;
+            }
+        </style>
+    </section>
+    <section class="slide">
+        <img class="cover" src="pictures/Screen-6.png" alt="">
+    </section>
+    <section class="slide">
+        <img class="cover" src="pictures/Screen-5.png" alt="">
+    </section>
+    <section class="slide">
+        <img class="cover" src="pictures/Screen-1.png" alt="">
+    </section>
+    <section class="slide">
+        <img class="cover" src="pictures/Screen-2.png" alt="">
+    </section>
+    <section class="slide">
+        <img class="cover" src="pictures/Screen-7.png" alt="">
+    </section>
+    
+    <div class="progress"></div>
+
+    <script src="shower/shower.min.js"></script>
+    <!-- Copyright © 3000 Yours Truly, Famous Inc. -->
+
+</body>
+</html>
